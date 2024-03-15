@@ -1,0 +1,16 @@
+.header {
+    background-image: url("../../assets/images/image-hero-mobile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.headerLogo {
+    padding: 35px 23px 0;
+}
