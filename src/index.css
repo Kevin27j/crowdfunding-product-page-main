@@ -8,3 +8,25 @@ body{
     position: relative;
     max-width: 375px;
 }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header {
+    background-image: url(./assets/images/image-hero-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.header-child {
+    padding: 27px 19px 0;
+}
