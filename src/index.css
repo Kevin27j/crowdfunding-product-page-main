@@ -5,6 +5,7 @@
 }
 
 body{
+    background-color: #F4F4F4;
     position: relative;
     max-width: 375px;
 }
@@ -14,11 +15,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-}
-
-.topCardPos {
-    position: relative;
-    margin-top: -55px;
 }
 
 .header {
@@ -34,6 +30,11 @@ body{
 
 .header-child {
     padding: 27px 19px 0;
+}
+
+.topCardPos {
+    position: relative;
+    margin-top: -55px;
 }
 
 .mastercraftLogo {

@@ -9,12 +9,9 @@ import MastercraftLogo from '../assets/images/logo-mastercraft.svg'
 function TopCard() {
   return (
     <div className='flex topCardPos'>
-      <Card sx={{ maxWidth: '320px', padding: '10px' }}>
+      <Card sx={{ maxWidth: '320px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }}>
         <img className='mastercraftLogo' src={MastercraftLogo} />
         <CardContent>
-          {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            Word of the Day
-          </Typography> */}
           <Typography variant="h5">
             Mastercraft Bamboo Monitor Riser
           </Typography>
@@ -23,8 +20,8 @@ function TopCard() {
           </Typography>
         </CardContent>
         <CardActions>
-        <Button>Back this project</Button>
-        <Button>Bookmark</Button>
+          <Button>Back this project</Button>
+          <Button>Bookmark</Button>
         </CardActions>
       </Card>
     </div>
