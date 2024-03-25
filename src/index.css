@@ -16,6 +16,11 @@ body{
     flex-direction: row;
 }
 
+.topCardPos {
+    position: relative;
+    margin-top: -55px;
+}
+
 .header {
     background-image: url(./assets/images/image-hero-mobile.jpg);
     background-position: center;
@@ -30,3 +35,18 @@ body{
 .header-child {
     padding: 27px 19px 0;
 }
+
+.mastercraftLogo {
+    position: absolute;
+    top: -25px;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#basic-menu {
+    min-width: 390px;
+}
+
+

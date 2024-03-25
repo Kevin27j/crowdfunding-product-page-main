@@ -1,12 +1,12 @@
 import Header from "./components/Header"
-import Card from "./components/Card"
+import TopCard from "./components/TopCard";
 import "./index.css"
 
 function App() {
   return (
     <>
       <Header />
-      <Card />
+      <TopCard />
     </>
   );
 }
