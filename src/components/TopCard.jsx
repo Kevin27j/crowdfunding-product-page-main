@@ -4,7 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MastercraftLogo from '../assets/images/logo-mastercraft.svg'
+import BookmarkButtonLogo from '../assets/images/icon-bookmark.svg'
+import { styled } from '@mui/material';
 
+const MainButton = styled(Button)({
+  borderRadius: '30px', 
+  boxShadow: 'none', 
+  backgroundColor: 'hsl(176, 50%, 47%)',
+  color: 'white',
+  padding: '15px 30px'
+})
 
 function TopCard() {
   return (
@@ -20,8 +29,9 @@ function TopCard() {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button>Back this project</Button>
-          <Button>Bookmark</Button>
+          <MainButton variant="text">Back this project</MainButton>
+          <Button variant="text" size='small'> <img src={BookmarkButtonLogo}/></Button>
+          {/* <AltButton variant="contained"></AltButton> */}
         </CardActions>
       </Card>
     </div>
