@@ -1,5 +1,6 @@
 import Header from "./components/Header"
-import TopCard from "./components/TopCard";
+import TopCard from "./components/TopCard"
+import StatsCard from "./components/StatsCard"
 import "./index.css"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <TopCard />
+    <StatsCard />
     </>
   );
 }
