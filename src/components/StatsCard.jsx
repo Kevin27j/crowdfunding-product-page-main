@@ -4,23 +4,31 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+    cyan: {
+        moderate: 'hsl(176, 50%, 47%)',
+        dark: 'hsl(176, 72%, 28%)'
+    }
+})
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-    height: 10,
+    height: 12,
     borderRadius: 5,
     [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
+      backgroundColor: '#F4F4F4',
     },
     [`& .${linearProgressClasses.bar}`]: {
       borderRadius: 5,
-      backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
+      backgroundColor: theme.cyan.moderate
     },
   }));
 
 function StatsCard() {
     return (
         <div className='flex'>
-            <Card sx={{ width: '320px', padding: '30px 10px', marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }}>
+            <Card sx={{ width: '320px', padding: '30px 10px', marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
                 <CardContent sx={{ padding: "20px 15px" }}>
                     {/* Money backed */}
                     <Typography variant="h5" sx={{ fontSize: "33px", fontWeight: "bold", marginBottom: '10px' }}>
@@ -50,7 +58,9 @@ function StatsCard() {
                         days left
                     </Typography>
 
-                    <BorderLinearProgress  variant="determinate" value={80} />
+                    <ThemeProvider theme={theme}>
+                    <BorderLinearProgress variant="determinate" value={80} />
+                    </ThemeProvider>
                 </CardContent>
 
             </Card>

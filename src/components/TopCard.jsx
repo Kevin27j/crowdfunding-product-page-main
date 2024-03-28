@@ -22,7 +22,7 @@ const MainButton = styled(Button)({
 function TopCard() {
   return (
     <div className='flex topCardPos'>
-      <Card sx={{ width: '320px', padding: '30px 10px',  marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }}>
+      <Card sx={{ width: '320px', padding: '30px 10px',  marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
         <img className='mastercraftLogo' src={MastercraftLogo} />
         <CardContent sx={{ padding: "20px 15px" }}>
           <Typography variant="h5" sx={{ fontSize: "22px", fontWeight: "bold", marginBottom: 1.5 }}>
