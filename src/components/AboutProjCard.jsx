@@ -59,14 +59,14 @@ function StatsCard() {
                         <Card sx={{ width: '260px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
                             <CardContent sx={{ padding: "10px 15px", textAlign: 'left' }}>
                                 <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: "bold", marginBottom: '10px' }}>
-                                Black Edition Stand
+                                    Black Edition Stand
                                 </Typography>
                                 <Typography color='hsl(176, 50%, 47%)' variant="h5" sx={{ fontSize: "17px", fontWeight: "bold", marginBottom: '10px' }}>
-                                Pledge $75 or more
+                                    Pledge $75 or more
                                 </Typography>
                                 <Typography color="text.secondary" sx={{ fontSize: "16px", marginBottom: '20px' }}>
-                                You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
+                                    You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                                    member list. Shipping is included.
                                 </Typography>
                                 <Typography>
                                     64 left
@@ -80,14 +80,14 @@ function StatsCard() {
                         <Card sx={{ width: '260px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
                             <CardContent sx={{ padding: "10px 15px", textAlign: 'left' }}>
                                 <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: "bold", marginBottom: '10px' }}>
-                                Mahogany Special Edition
+                                    Mahogany Special Edition
                                 </Typography>
                                 <Typography color='hsl(176, 50%, 47%)' variant="h5" sx={{ fontSize: "17px", fontWeight: "bold", marginBottom: '10px' }}>
-                                Pledge $200 or more
+                                    Pledge $200 or more
                                 </Typography>
                                 <Typography color="text.secondary" sx={{ fontSize: "16px", marginBottom: '20px' }}>
-                                You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
+                                    You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+                                    to our Backer member list. Shipping is included.
                                 </Typography>
                                 <Typography>
                                     0 left
