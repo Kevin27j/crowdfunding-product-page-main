@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import data from '../data'
 import { styled } from '@mui/material';
 
 const MainButton = styled(Button)({
@@ -16,6 +18,8 @@ const MainButton = styled(Button)({
 
 
 function StatsCard() {
+    const [cards] = useState(data);
+
     return (
         <div className='flex'>
             <Card sx={{ width: '320px', padding: '30px 10px', marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
@@ -35,69 +39,31 @@ function StatsCard() {
 
                     <Stack spacing={3}>
 
-                        <Card sx={{ width: '260px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
-                            <CardContent sx={{ padding: "10px 15px", textAlign: 'left' }}>
-                                <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: "bold", marginBottom: '10px' }}>
-                                    Bamboo Stand
-                                </Typography>
-                                <Typography color='hsl(176, 50%, 47%)' variant="h5" sx={{ fontSize: "17px", fontWeight: "bold", marginBottom: '10px' }}>
-                                    Pledge $25 or more
-                                </Typography>
-                                <Typography color="text.secondary" sx={{ fontSize: "16px", marginBottom: '20px' }}>
-                                    You get an ergonomic stand made of natural bamboo. You&apos;ve helped us launch our promotional campaign, and
-                                    you’ll be added to a special Backer member list.
-                                </Typography>
-                                <Typography>
-                                    101 left
-                                </Typography>
-                            </CardContent>
-                            <CardActions sx={{ justifyContent: "left" }}>
-                                <MainButton sx={{ fontWeight: "bold", whiteSpace: "nowrap", fontSize: "13px" }} variant="text">Select Reward</MainButton>
-                            </CardActions>
-                        </Card>
+                        {cards.map(card => {
+                            const { id, title, subtitle, description, quantity, selectButton } = card
 
-                        <Card sx={{ width: '260px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
-                            <CardContent sx={{ padding: "10px 15px", textAlign: 'left' }}>
-                                <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: "bold", marginBottom: '10px' }}>
-                                    Black Edition Stand
-                                </Typography>
-                                <Typography color='hsl(176, 50%, 47%)' variant="h5" sx={{ fontSize: "17px", fontWeight: "bold", marginBottom: '10px' }}>
-                                    Pledge $75 or more
-                                </Typography>
-                                <Typography color="text.secondary" sx={{ fontSize: "16px", marginBottom: '20px' }}>
-                                    You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-                                    member list. Shipping is included.
-                                </Typography>
-                                <Typography>
-                                    64 left
-                                </Typography>
-                            </CardContent>
-                            <CardActions sx={{ justifyContent: "left" }}>
-                                <MainButton sx={{ fontWeight: "bold", whiteSpace: "nowrap", fontSize: "13px" }} variant="text">Select Reward</MainButton>
-                            </CardActions>
-                        </Card>
-
-                        <Card sx={{ width: '260px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
-                            <CardContent sx={{ padding: "10px 15px", textAlign: 'left' }}>
-                                <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: "bold", marginBottom: '10px' }}>
-                                    Mahogany Special Edition
-                                </Typography>
-                                <Typography color='hsl(176, 50%, 47%)' variant="h5" sx={{ fontSize: "17px", fontWeight: "bold", marginBottom: '10px' }}>
-                                    Pledge $200 or more
-                                </Typography>
-                                <Typography color="text.secondary" sx={{ fontSize: "16px", marginBottom: '20px' }}>
-                                    You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-                                    to our Backer member list. Shipping is included.
-                                </Typography>
-                                <Typography>
-                                    0 left
-                                </Typography>
-                            </CardContent>
-                            <CardActions sx={{ justifyContent: "left" }}>
-                                <MainButton sx={{ fontWeight: "bold", whiteSpace: "nowrap", fontSize: "13px" }} variant="text">Select Reward</MainButton>
-                            </CardActions>
-                        </Card>
-
+                            return (
+                                <Card key={id} sx={{ width: '260px', padding: '30px 10px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
+                                    <CardContent sx={{ padding: "10px 15px", textAlign: 'left' }}>
+                                        <Typography variant="h5" sx={{ fontSize: "20px", fontWeight: "bold", marginBottom: '10px' }}>
+                                            {title}
+                                        </Typography>
+                                        <Typography color='hsl(176, 50%, 47%)' variant="h5" sx={{ fontSize: "17px", fontWeight: "bold", marginBottom: '10px' }}>
+                                            {subtitle}
+                                        </Typography>
+                                        <Typography color="text.secondary" sx={{ fontSize: "16px", marginBottom: '20px' }}>
+                                            {description}
+                                        </Typography>
+                                        <Typography>
+                                            {quantity} left
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions sx={{ justifyContent: "left" }}>
+                                        <MainButton sx={{ fontWeight: "bold", whiteSpace: "nowrap", fontSize: "13px" }} variant="text">{selectButton}</MainButton>
+                                    </CardActions>
+                                </Card>
+                            )
+                        })}
 
                     </Stack>
                 </CardContent>
