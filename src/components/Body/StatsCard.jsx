@@ -1,7 +1,4 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
+import {Box, Card, CardContent, Typography, Divider} from '@mui/material';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -27,7 +24,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 function StatsCard() {
     return (
-        <div className='flex'>
+        <Box className='flex'>
             <Card sx={{ width: '320px', padding: '30px 10px', marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
                 <CardContent sx={{ padding: "20px 15px" }}>
                     {/* Money backed */}
@@ -64,7 +61,7 @@ function StatsCard() {
                 </CardContent>
 
             </Card>
-        </div>
+        </Box>
     )
 }
 

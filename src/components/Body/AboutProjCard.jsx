@@ -1,27 +1,13 @@
 import { useState } from 'react';
-import Stack from '@mui/material/Stack';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import data from '../data'
-import { styled } from '@mui/material';
-
-const MainButton = styled(Button)({
-    borderRadius: '30px',
-    boxShadow: 'none',
-    backgroundColor: 'hsl(176, 50%, 47%)',
-    color: 'white',
-    padding: '15px 30px'
-})
-
+import {Box, Stack, Card, CardContent, CardActions, Typography } from '@mui/material';
+import data from '../../data'
+import MainButton from '../MainButton';
 
 function StatsCard() {
     const [cards] = useState(data);
 
     return (
-        <div className='flex'>
+        <Box className='flex'>
             <Card sx={{ width: '320px', padding: '30px 10px', marginBottom: '20px', textAlign: 'center', borderRadius: '.7rem', boxShadow: 'none' }} variant='outlined'>
                 <CardContent sx={{ padding: "20px 15px", textAlign: 'left' }}>
 
@@ -59,7 +45,7 @@ function StatsCard() {
                                         </Typography>
                                     </CardContent>
                                     <CardActions sx={{ justifyContent: "left" }}>
-                                        <MainButton sx={{ fontWeight: "bold", whiteSpace: "nowrap", fontSize: "13px" }} variant="text">{selectButton}</MainButton>
+                                        <MainButton title={selectButton}/>
                                     </CardActions>
                                 </Card>
                             )
@@ -68,7 +54,7 @@ function StatsCard() {
                     </Stack>
                 </CardContent>
             </Card>
-        </div>
+        </Box>
     )
 }
 

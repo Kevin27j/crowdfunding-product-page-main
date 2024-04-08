@@ -1,8 +1,8 @@
 import Stack from '@mui/material/Stack';
-import Header from "./components/Header"
-import TopCard from "./components/TopCard"
-import StatsCard from "./components/StatsCard"
-import AboutProjCard from "./components/AboutProjCard"
+import Header from "./components/Header/Header"
+import TopCard from "./components/Body/TopCard"
+import StatsCard from "./components/Body/StatsCard"
+import AboutProjCard from "./components/Body/AboutProjCard"
 import "./index.css"
 
 function App() {
